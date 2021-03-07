@@ -1,0 +1,28 @@
+.about__container{
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0% 10% 0% 10%;
+  }
+  
+  .about__container__img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 1.5px 1.5px 8px #c76284;
+    justify-self: center;
+  }
+
+  .about__content{
+      padding-top: 3%;
+  }
+
+  .about__text{
+      text-align: justify;
+  }
+
+  .title{
+      padding-bottom: 2%;
+  }

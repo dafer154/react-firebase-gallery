@@ -1,0 +1,138 @@
+{
+    "appData": {
+        "productsPage": {
+            "products": [
+                {
+                    "number": "001003",
+                    "name": "Green pencil",
+                    "date": "2020-10-10",
+                    "sku": 229,
+                    "weight": "0.02kg",
+                    "height": "20cm",
+                    "width": "2cm",
+                    "origin": "Singapore",
+                    "minimum": 100,
+                    "delay": "30 days",
+                    "id": 1
+                },
+                {
+                    "number": "001004",
+                    "name": "Red pencil",
+                    "date": "2020-10-10",
+                    "sku": 243,
+                    "weight": "0.02kg",
+                    "height": "20cm",
+                    "width": "2cm",
+                    "origin": "Singapore",
+                    "minimum": 100,
+                    "delay": "30 days",
+                    "id": 2
+                },
+                {
+                    "number": "004673",
+                    "name": "Ruler",
+                    "date": "2020-10-20",
+                    "sku": 331,
+                    "weight": "0.03kg",
+                    "height": "30cm",
+                    "width": "3cm",
+                    "origin": "China",
+                    "minimum": 50,
+                    "delay": "30 days",
+                    "id": 3
+                },
+                {
+                    "number": "004033",
+                    "name": "Notepad",
+                    "date": "2020-03-11",
+                    "sku": 211,
+                    "weight": "0.04kg",
+                    "height": "30cm",
+                    "width": "12cm",
+                    "origin": "China",
+                    "minimum": 70,
+                    "delay": "20 days",
+                    "id": 4
+                },
+                {
+                    "number": "002212",
+                    "name": "Big Calendar",
+                    "date": "2020-12-16",
+                    "sku": 322,
+                    "weight": "0.04kg",
+                    "height": "50cm",
+                    "width": "70cm",
+                    "origin": "Taiwan",
+                    "minimum": 100,
+                    "delay": "10 days",
+                    "id": 5
+                },
+                {
+                    "number": "002214",
+                    "name": "Small Calendar",
+                    "date": "2020-12-17",
+                    "sku": 322,
+                    "weight": "0.04kg",
+                    "height": "40cm",
+                    "width": "50cm",
+                    "origin": "Taiwan",
+                    "minimum": 100,
+                    "delay": "12 days",
+                    "id": 6
+                }
+            ],
+            "columnsProducts": [
+                {
+                    "field": "number",
+                    "headerName": "Number",
+                    "width": 70
+                },
+                {
+                    "field": "name",
+                    "headerName": "Name",
+                    "width": 70
+                },
+                {
+                    "field": "date",
+                    "headerName": "Date",
+                    "width": 70
+                },
+                {
+                    "field": "sku",
+                    "headerName": "Sku",
+                    "width": 70
+                },
+                {
+                    "field": "weight",
+                    "headerName": "Weight",
+                    "width": 70
+                },
+                {
+                    "field": "height",
+                    "headerName": "Height",
+                    "width": 70
+                },
+                {
+                    "field": "width",
+                    "headerName": "Width",
+                    "width": 70
+                },
+                {
+                    "field": "origin",
+                    "headerName": "Origin",
+                    "width": 70
+                },
+                {
+                    "field": "minimun",
+                    "headerName": "Minimum",
+                    "width": 70
+                },
+                {
+                    "field": "delay",
+                    "headerName": "Delay",
+                    "width": 70
+                }
+            ]
+        }
+    }
+}
