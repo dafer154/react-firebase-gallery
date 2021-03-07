@@ -1,8 +1,5 @@
 # Patagonian TEST
 
-### [Deployment WebSite](https://dafer154.github.io/frontend-todolist/#/)
-
-
 ## Table of contents
 
 *  [General info](#general-info)
