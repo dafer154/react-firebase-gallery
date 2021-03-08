@@ -2,16 +2,23 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: './src/index.tsx',
     output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js",
+        path: path.join(__dirname, 'dist/'),
+        publicPath: '/',
+        filename: 'bundle.js'
     },
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: ['.ts', '.tsx', ".js", ".jsx"],
     },
     module: {
         rules: [
+            {
+                test: /\.tsx?$/,
+                use: {
+                    loader: 'awesome-typescript-loader'
+                }
+            },
             {
                 test: /.(js|jsx)$/,
                 exclude: /node_modules/,

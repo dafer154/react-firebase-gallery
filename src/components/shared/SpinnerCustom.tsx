@@ -5,7 +5,7 @@ const SpinnerCustom = () => {
 
     return (
         <div>
-            <Spinner animation="border" size="m" />
+            <Spinner animation="border" />
             <span>Loading...</span>
         </div>
     )

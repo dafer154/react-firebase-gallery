@@ -1,5 +1,6 @@
 import axios from "axios";
 import firebase, { storage } from '../firebase';
+import { Image } from '../models/Image.Model';
 
 //FAKE DATABASE
 export const BASE_URL = "http://localhost:3001/appData";
@@ -20,10 +21,10 @@ export const getAllProductsColumns = async () => {
     }
 }
 
-export const getCollection = async (collectionId, db = firebase.firestore()) => {
+export const getCollection = async (collectionId: string, db = firebase.firestore()) => {
     try {
         const data = await db.collection(collectionId).get()
-        return data.docs.map(doc => ({
+        return data.docs.map((doc: any) => ({
             ...(doc.data()),
             _id: doc.id
         }));
@@ -33,24 +34,29 @@ export const getCollection = async (collectionId, db = firebase.firestore()) => 
 };
 
 export const deleteItemOnCollection = async (
-    collectionId,
-    idImage,
+    collectionId: string,
+    idImage: string,
+    imageName: string,
     db = firebase.firestore()
 ) => {
     try {
+        const storageRef = storage.ref('images/')
+        const fileRef = storageRef.child(imageName)
+        await fileRef.delete();
         return db.collection(collectionId).doc(idImage).delete();
     } catch (error) {
         console.log("Error", error);
     }
 }
 
-export const addItemToCollection = async (collectionId, image, db = firebase.firestore()) => {
+export const addItemToCollection = async (collectionId: string, image: any, db = firebase.firestore()) => {
     try {
+        const modifyName = `${new Date().getMilliseconds().toString()}-${image.name}`
         const storageRef = storage.ref('images/')
-        const fileRef = storageRef.child(`${new Date().getMilliseconds().toString()}-${image.name}`)
+        const fileRef = storageRef.child(modifyName)
         await fileRef.put(image)
         const urlImage = await fileRef.getDownloadURL()
-        const objectImage = { name: image.name, url: urlImage }
+        const objectImage: Image = { name: modifyName, url: urlImage }
         const newItem = await (await db.collection(collectionId).add(objectImage)).get();
         return {
             ...newItem.data(),

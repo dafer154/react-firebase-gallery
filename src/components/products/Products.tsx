@@ -10,6 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import SpinnerCustom from '../shared/SpinnerCustom';
 import './styles/Products.css';
+import { Row, Columns } from '../../models/Products.Model';
 
 const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -38,9 +39,9 @@ const useStyles = makeStyles({
 
 const Products = () => {
 
-    const [rows, setRows] = useState(null);
-    const [columns, setColumns] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [rows, setRows] = useState<any>(null);
+    const [columns, setColumns] = useState<any>(null);
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
         setLoading(true);
@@ -49,8 +50,8 @@ const Products = () => {
 
 
     const getAllData = async () => {
-        const productsData = await getAllProducts();
-        const productsColumns = await getAllProductsColumns();
+        const productsData: any = await getAllProducts();
+        const productsColumns: any = await getAllProductsColumns();
         setRows(productsData.data.productsPage.products);
         setColumns(productsColumns.data.productsPage.columnsProducts);
         setLoading(false);
@@ -68,14 +69,14 @@ const Products = () => {
                         <TableHead>
                             <TableRow>
                                 {
-                                    columns && columns.map((col) => (
+                                    columns && columns.map((col: Columns) => (
                                         <StyledTableCell key={col.field} align="center">{col.headerName}</StyledTableCell>
                                     ))
                                 }
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {rows && rows.map((row) => (
+                            {rows && rows.map((row: Row) => (
                                 <StyledTableRow key={row.id}>
                                     <StyledTableCell align="center">{row.number}</StyledTableCell>
                                     <StyledTableCell align="center">{row.name}</StyledTableCell>

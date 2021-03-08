@@ -10,8 +10,6 @@
 
 *  [Setup](#setup)
 
-*  [Web Client](#webclient)
-
 ## General info
 
 Patagonian test is a Responsive WebApp that include diferents routes how: About, Gallery, Products This project was developed using React and Firebase.
@@ -26,22 +24,17 @@ Patagonian test is a Responsive WebApp that include diferents routes how: About,
 
 Project is created with:
 
-* Node.js version: 12.0.0
-
-* NPM version: 6.9.0
-
-* React version: 16.8.6
-
+* Node.js
+* NPM
+* React
+* TypeScript
+* WebPack
+* Babel
 * Firebase
-
 * React bootstrap
-
 * React Material
-
 * Axios
-
 * Json server 
-
 * React-router-dom
 
 ## Setup
@@ -49,6 +42,9 @@ Project is created with:
 ### NPM Install 
 
 To run this project, install it locally using npm:
+
+### NOTE
+There are many images in the folder ```$../src/assets/images/cocktails``` for use in the test of the gallery
 
 ```
 $ git clone https://github.com/dafer154/frontend-todolist.git
@@ -61,11 +57,3 @@ $ npm run serve
 
 $ npm run start
 ```
-
-## Web Client
-
-* React for Client Web.
-* React-bootstrap
-* Axios
-* React-router-dom
-* React Material
