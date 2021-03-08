@@ -53,7 +53,7 @@ $ cd frontend-todolist
 
 $ npm install
 
-$ npm run serve
+$ npm run serve-data
 
 $ npm run start
 ```
