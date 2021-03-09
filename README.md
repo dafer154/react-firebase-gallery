@@ -12,7 +12,7 @@
 
 ## General info
 
-Patagonian test is a Responsive WebApp that include diferents routes how: About, Gallery, Products This project was developed using React and Firebase.
+Patagonian test is a Responsive WebApp that includes diferent routes like: About, Gallery, Products This project was built using React and Firebase.
 
 ## Features
 
@@ -22,7 +22,7 @@ Patagonian test is a Responsive WebApp that include diferents routes how: About,
 
 ## Technologies
 
-Project is created with:
+Project built using:
 
 * Node.js
 * NPM
@@ -44,7 +44,7 @@ Project is created with:
 To run this project, install it locally using npm:
 
 ### NOTE
-There are many images in the folder ```$../src/assets/images/cocktails``` for use in the test of the gallery
+There are many images in the folder ```$../src/assets/images/cocktails``` used for testing the gallery
 
 ```
 $ git clone https://github.com/dafer154/frontend-todolist.git

@@ -1,9 +1,9 @@
 .container{
-    padding-top: 2%;
+    padding-top: 1%;
 }
 
 .container-table{
-    padding-top: 4%;
+    padding-top: 2%;
     display: flex;
     justify-content: center;
 }

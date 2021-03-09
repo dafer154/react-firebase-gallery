@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { getCollection, deleteItemOnCollection, addItemToCollection } from '../../services/DataService'
 import './styles/Gallery.css';
 import SpinnerCustom from '../shared/SpinnerCustom';
+import { Image } from "../../models/Image.Model";
 
 
 const Gallery = () => {
@@ -13,11 +14,11 @@ const Gallery = () => {
     const imageInputRef = useRef<any>(null);
 
     useEffect(() => {
-        setLoading(true);
         getAllImages()
     }, [])
 
     const getAllImages = async () => {
+        setLoading(true);
         try {
             const allImages = await getCollection('images');
             setListImages(allImages);
@@ -42,8 +43,8 @@ const Gallery = () => {
     }
 
     const onFileChange = async (event: any) => {
-        const file = event.target.files[0];
-        setSelectedFile(file);
+        const {target = {}} = {...event};
+        setSelectedFile(target.files[0]);
     };
 
     const onFileUpload = async () => {
@@ -58,6 +59,15 @@ const Gallery = () => {
         }
     };
 
+
+    const renderImges = (img: Image) =>{
+        const {name='', _id='', url=''} = {...img}
+        return (<div className="gallery-item" key={_id} >
+        <div className="delete-image" onClick={() => deleteImage(_id, name)}></div>
+        <img className="gallery-image" src={url} alt={name} />
+    </div>)
+    }
+
     return (
         <div className="container">
             <h1>Image Gallery</h1>
@@ -70,12 +80,7 @@ const Gallery = () => {
             </div>
             <div className="gallery">
                 {
-                    !notImages && listImages.map((img: any) => (
-                        <div className="gallery-item" key={img._id} >
-                            <div className="delete-image" onClick={() => deleteImage(img._id, img.name)}></div>
-                            <img className="gallery-image" src={img.url} alt={img.name} />
-                        </div>
-                    ))
+                    !notImages && listImages.map((img: Image) => renderImges(img))
                 }
                 {
                     notImages && <h1>Empty images</h1>

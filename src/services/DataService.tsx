@@ -23,8 +23,8 @@ export const getAllProductsColumns = async () => {
 
 export const getCollection = async (collectionId: string, db = firebase.firestore()) => {
     try {
-        const data = await db.collection(collectionId).get()
-        return data.docs.map((doc: any) => ({
+        const {docs = []} = await db.collection(collectionId).get()
+        return docs.map((doc: any) => ({
             ...(doc.data()),
             _id: doc.id
         }));
