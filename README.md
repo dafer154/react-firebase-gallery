@@ -1,4 +1,4 @@
-# Patagonian TEST
+# React + Firebase + Gallery
 
 ## Table of contents
 
@@ -12,7 +12,7 @@
 
 ## General info
 
-Patagonian test is a Responsive WebApp that includes diferent routes like: About, Gallery, Products This project was built using React and Firebase.
+Is a Responsive WebApp that includes diferent routes like: About, Gallery, Products This project was built using React and Firebase.
 
 ## Features
 
